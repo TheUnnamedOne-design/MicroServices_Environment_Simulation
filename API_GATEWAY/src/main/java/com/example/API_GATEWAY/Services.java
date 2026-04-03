@@ -1,21 +1,22 @@
 package com.example.API_GATEWAY;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.example.Payload;
 import org.example.ProcessorResponse;
-import java.util.Map;
-import java.util.HashMap;
 
 @RestController
 public class Services {
 
+    @Autowired
+    private APIMethods apiMethods;
+
     @PostMapping("/process")
-    public ProcessorResponse processRequest(Payload payload)
+    public ProcessorResponse processRequest(@RequestBody Payload payload)
     {
-        Map<Character, Integer> charCountMap = new HashMap<>();
-        charCountMap.put('a', 5);
-        ProcessorResponse response = new ProcessorResponse(charCountMap);
+        ProcessorResponse response = apiMethods.ProcessData(payload);
         return response;
     }
 }

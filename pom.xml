@@ -27,10 +27,10 @@
 
     <modules>
         <module>DTO_Models</module>
-        <module>API_GATEWAY/API_GATEWAY</module>
-        <module>DB_Controller/DB_Controller</module>
-        <module>Load_Balancer/Load_Balancer</module>
-        <module>Processor/Processor</module>
+        <module>API_GATEWAY</module>
+        <module>DB_Controller</module>
+        <module>Load_Balancer</module>
+        <module>Processor</module>
     </modules>
 
 </project>
