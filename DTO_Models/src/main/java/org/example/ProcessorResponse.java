@@ -3,18 +3,22 @@ import java.util.*;
 
 public class ProcessorResponse {
 
-    Map<Character, Integer> charCountMap;
+    Map<String, Integer> charCountMap;
 
-    public ProcessorResponse(Map<Character,Integer> mp)
+    public ProcessorResponse()
+    {
+    }
+
+    public ProcessorResponse(Map<String,Integer> mp)
     {
         this.charCountMap = mp;
     }
 
-    public Map<Character, Integer> getCharCountMap() {
+    public Map<String, Integer> getCharCountMap() {
         return charCountMap;
     }
 
-    public void setCharCountMap(Map<Character, Integer> charCountMap) {
+    public void setCharCountMap(Map<String, Integer> charCountMap) {
         this.charCountMap = charCountMap;
     }
 }

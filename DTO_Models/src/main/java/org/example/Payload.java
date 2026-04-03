@@ -3,6 +3,10 @@ package org.example;
 public class Payload {
     String text;
 
+    public Payload()
+    {
+    }
+
     public Payload(String text)
     {
         this.text=text;
